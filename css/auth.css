@@ -1,0 +1,251 @@
+/* ===============================
+   Root Variables
+=================================*/
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, rgba(120, 120, 255, 0.6) 0%, rgba(180, 80, 255, 0.6) 100%);
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --dark-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --neon-glow: 0 0 20px rgba(79, 172, 254, 0.3);
+  --hover-glow: 0 0 40px rgba(79, 172, 254, 0.5);
+}
+
+/* ===============================
+   Base Reset (Scoped)
+=================================*/
+.auth-wrapper * {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   Page & Layout
+=================================*/
+body {
+  background: var(--dark-gradient);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;         /* Top & bottom spacing */
+  min-height: 90vh;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 6rem;
+}
+
+.auth-image {
+  flex: 1;
+  background: var(--primary-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.auth-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.auth-wrapper {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    display: none;
+  }
+
+  .auth-wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ===============================
+   Typography
+=================================*/
+.auth-wrapper h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.gradient-icon {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+.auth-wrapper .switch-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.auth-wrapper .switch-link a {
+  color: #4e54c8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-wrapper p#signup-message,
+.auth-wrapper p#login-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ===============================
+   Form Elements
+=================================*/
+.auth-wrapper input[type="email"],
+.auth-wrapper input[type="password"],
+.auth-wrapper input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.auth-wrapper input:focus {
+  border-color: #4e54c8;
+  outline: none;
+}
+
+.auth-wrapper button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #4e54c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-wrapper button:hover {
+  background-color: #3d42b5;
+}
+
+/* ===============================
+   Password Visibility
+=================================*/
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* ===============================
+   Background Animations
+=================================*/
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.bg-animation::before,
+.bg-animation::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.bg-animation::before {
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+}
+
+.bg-animation::after {
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+  animation-direction: reverse;
+  animation-duration: 25s;
+}
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-20px); }
+}

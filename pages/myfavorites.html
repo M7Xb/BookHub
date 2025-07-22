@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookHub – My Favorites</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/myfavorites.css">
+  
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-animation"></div>
+
+  <!-- Particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Navigation -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="container mt-5">
+    <!-- Hero Section -->
+    <section class="hero-section fade-in mb-5 visible">
+      <h1 class="hero-title">Manage Your Favorites</h1>
+      <p class="hero-subtitle">
+        This is your personal library of cherished books and audiobooks.
+        Revisit the stories that have captivated you and find them all in one place.
+      </p>
+    </section>
+
+   
+    <!-- Filter Pills -->
+    <div class="filter-pills" id="filterPills">
+      <div class="filter-pill active" id="all-filter">All</div>
+      <div class="filter-pill" id="book-filter">Books</div>
+      <div class="filter-pill" id="audiobook-filter">Audiobooks</div>
+    </div>
+
+    <!-- Favorites Grid -->
+    <div class="row" id="favoritesGrid">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <!-- No Favorites Message -->
+    <div class="text-center py-5" id="noFavorites" style="display: none;">
+      <div class="glassmorphism p-5">
+        <div class="mb-4">
+          <i class="far fa-heart fa-4x text-muted mb-3" style="opacity: 0.6;"></i>
+        </div>
+        <h3 class="mb-3 fw-bold">No Favorites Yet</h3>
+        <p class="text-muted mb-4 fs-5">Your favorite books and audiobooks will appear here. Start exploring!</p>
+      
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="../js/include.js" type="module"></script>
+  <script src="../js/myfavorites.js" type="module"></script>
+</body>
+
+</html>

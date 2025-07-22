@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookHub – Discover & Share Knowledge</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+          <h1 class="hero-title">Discover & Share Knowledge</h1>
+          <p class="hero-subtitle">Join thousands of readers in our community-driven platform for free books and
+            audiobooks.</p>
+          <a href="#featured" class="cta-button">
+            Start Exploring <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="../assets/books.svg" alt="Books Illustration" class="hero-illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="stat-card text-center">
+            <div class="stat-icon mb-2"><i class="fas fa-book fa-2x text-purple"></i></div>
+            <div class="stat-number" id="total-books">0</div>
+            <div class="stat-label">Books</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="stat-card text-center">
+            <div class="stat-icon mb-2"><i class="fas fa-headphones fa-2x text-purple"></i></div>
+            <div class="stat-number" id="total-audiobooks">0</div>
+            <div class="stat-label">Audiobooks</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="stat-card text-center">
+            <div class="stat-icon mb-2"><i class="fas fa-users fa-2x text-purple"></i></div>
+            <div class="stat-number" id="total-users">0</div>
+            <div class="stat-label">Users</div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <div class="stat-card text-center">
+            <div class="stat-icon mb-2"><i class="fas fa-tags fa-2x text-purple"></i></div>
+            <div class="stat-number" id="total-categories">0</div>
+            <div class="stat-label">Categories</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section id="featured" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Featured Content</h2>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-crown"></i></div>
+            <h3 class="feature-title">Premium Collection</h3>
+            <p class="feature-description">Top-rated books handpicked by experts.</p>
+            <a href="#" class="feature-btn">Explore</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-headphones"></i></div>
+            <h3 class="feature-title">Trending Audiobooks</h3>
+            <p class="feature-description">Narrated by professionals for your convenience.</p>
+            <a href="#" class="feature-btn">Listen</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <h3 class="feature-title">Community Picks</h3>
+            <p class="feature-description">Favorites voted by our readers.</p>
+            <a href="#" class="feature-btn">See More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-choose-us" class="why-choose-us-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-book-open"></i></div>
+            <h3 class="why-title">Vast Library</h3>
+            <p class="why-description">Access thousands of books and audiobooks from various genres.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-users"></i></div>
+            <h3 class="why-title">Community-Driven</h3>
+            <p class="why-description">Share your thoughts and discover what others are reading.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="why-title">Mobile-Friendly</h3>
+            <p class="why-description">Read and listen on the go with our responsive design.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Uploads -->
+  <section id="latest" class="latest-section">
+    <div class="container">
+      <h2 class="section-title">Latest Uploads</h2>
+      <div class="row g-4" id="latest-books-container">
+        <!-- Latest books will be dynamically inserted here -->
+      </div>
+      <div class="text-center mt-4" id="view-all-books-btn-container">
+        <a href="/pages/books.html" class="view-all-btn">
+          View All Books <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title text-white">Contact Us</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <form class="contact-form">
+            <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea class="form-control mb-3" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="contact-btn">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+          </form>
+        </div>
+        <div class="col-lg-6 text-center"> 
+      
+          <img src="../assets/contact.svg" alt="Contact Illustration" class="contact-illustration mb-3">
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+  <script src="../js/home.js" type="module"></script>
+  <script src="../js/include.js" type="module"></script>
+</body>
+
+</html>

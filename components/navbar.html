@@ -1,0 +1,64 @@
+<!-- Enhanced Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">
+      <i class="fas fa-book-open me-2"></i>BookHub
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+      <!-- Left navigation -->
+      <ul id="main-links" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">
+            <i class="fas fa-home me-2"></i>Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">
+            <i class="fas fa-book me-2"></i>Books
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="audiobooks.html">
+            <i class="fas fa-headphones me-2"></i>Audiobooks
+          </a>
+        </li>
+        
+      </ul>
+
+      <!-- Right navigation (avatar + dropdown) -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <!-- Avatar will be updated with real image via JS -->
+            <img id="user-avatar" src="..//assets/avatar.svg" alt="avatar"
+              class="rounded-circle me-2" width="32" height="32" style="object-fit: cover;"
+              onerror="this.src='https://cdn-icons-png.flaticon.com/512/847/847969.png'">
+
+            <span>Account</span>
+
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" id="auth-menu">
+            <li>
+              <a class="dropdown-item" href="profile.html">
+                <i class="fas fa-user me-2"></i>Profile
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item text-danger" href="#" id="logout-btn">
+                <i class="fas fa-sign-out-alt me-2"></i>Logout
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
