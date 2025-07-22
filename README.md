@@ -2,7 +2,7 @@
 
 BookHub is a web application that allows users to discover, read, and share books and audiobooks. It provides a community-driven platform for knowledge sharing with user authentication, favorites management, and content categorization.
 
-![BookHub Screenshot](https://via.placeholder.com/800x400?text=BookHub+Screenshot)
+![BookHub Screenshot](./assets/bookhub.png)
 
 ## Features
 
