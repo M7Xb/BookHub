@@ -4,6 +4,8 @@ BookHub is a web application that allows users to discover, read, and share book
 
 ![BookHub Screenshot](assets/bookhub.png)
 
+🌐 **[Live Preview](https://books-mouad.surge.sh/pages/home.html)**
+
 ## Features
 
 - **User Authentication**: Secure login and signup functionality
